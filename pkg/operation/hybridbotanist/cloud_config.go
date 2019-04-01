@@ -165,6 +165,9 @@ func (b *HybridBotanist) generateOriginalConfig() (map[string]interface{}, error
 		if podPIDsLimit := kubeletConfig.PodPIDsLimit; podPIDsLimit != nil {
 			kubelet["podPIDsLimit"] = *podPIDsLimit
 		}
+		if volumePluginDir := kubeletConfig.VolumePluginDir; volumePluginDir != nil {
+			kubelet["volumePluginDir"] = *volumePluginDir
+		}
 	}
 
 	if b.Shoot.UsesCSI() {

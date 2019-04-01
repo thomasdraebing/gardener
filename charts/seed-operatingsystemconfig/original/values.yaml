@@ -23,6 +23,7 @@ kubernetes:
     enableCSI: false
     providerIDProvided: false
 #   podPIDsLimit: 24
+#   volumePluginDir: /usr/libexec/kubernetes/kubelet-plugins/volume/exec/
     featureGates: {}
 #     CustomResourceValidation: true
 #     RotateKubeletServerCertificate: false

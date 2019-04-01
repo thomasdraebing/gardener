@@ -4102,6 +4102,13 @@ func schema_pkg_apis_garden_v1beta1_KubeletConfig(ref common.ReferenceCallback) 
 							Format:      "int64",
 						},
 					},
+					"volumePluginDir": {
+						SchemaProps: spec.SchemaProps{
+							Description: "VolumePluginDir is the path to the directory containing the volume plugins.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
 				},
 			},
 		},

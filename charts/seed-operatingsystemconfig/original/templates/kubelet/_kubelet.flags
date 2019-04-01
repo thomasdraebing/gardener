@@ -36,4 +36,7 @@
 {{- if semverCompare "< 1.14" .Values.kubernetes.version }}
 --feature-gates=SupportPodPidsLimit=true \
 {{- end }}
+{{- if .Values.kubernetes.kubelet.volumePluginDir }}
+--volume-plugin-dir={{ .Values.kubernetes.kubelet.volumePluginDir }}
+{{- end }}
 {{- end -}}

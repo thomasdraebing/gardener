@@ -91,5 +91,8 @@ rotateCertificates: true
 runtimeRequestTimeout: 2m0s
 serializeImagePulls: true
 syncFrequency: 1m0s
+{{- if .Values.kubernetes.kubelet.volumePluginDir }}
+volumePluginDir: {{ .Values.kubernetes.kubelet.volumePluginDir }}
+{{- end }}
 volumeStatsAggPeriod: 1m0s
 {{- end -}}

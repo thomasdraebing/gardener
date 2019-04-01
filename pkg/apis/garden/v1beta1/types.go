@@ -1513,6 +1513,9 @@ type KubeletConfig struct {
 	// PodPIDsLimit is the maximum number of process IDs per pod allowed by the kubelet.
 	// +optional
 	PodPIDsLimit *int64 `json:"podPidsLimit,omitempty"`
+	// VolumePluginDir is the path to the directory containing the volume plugins.
+	// +optional
+	VolumePluginDir *string `json:"volumePluginDir,omitempty"`
 }
 
 // Maintenance contains information about the time window for maintenance operations and which

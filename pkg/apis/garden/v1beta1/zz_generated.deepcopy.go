@@ -1719,6 +1719,11 @@ func (in *KubeletConfig) DeepCopyInto(out *KubeletConfig) {
 		*out = new(int64)
 		**out = **in
 	}
+	if in.VolumePluginDir != nil {
+		in, out := &in.VolumePluginDir, &out.VolumePluginDir
+		*out = new(string)
+		**out = **in
+	}
 	return
 }
 
